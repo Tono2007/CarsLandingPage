@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+}
+
+$primary-color: #2ba6cb;
+
+* {
+  background: $primary-color;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+}
+
+.container,
+.font {
+  font-size: 4rem;
+  background: blue;
+}
+
+.container {
+  font-size: 4rem;
+  background: lightcoral;
+
+  font-family: sans-serif;
+}
+.font {
+  font-size: 8rem;
+
+  font-family: "Poppins", sans-serif;
+}
