@@ -1,0 +1,31 @@
+{
+  "name": "carslandingpage",
+  "version": "1.0.0",
+  "description": "Simple CarsLandingPage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production --config webpack.config.js",
+    "dev": "webpack --mode development --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tono2007/CarsLandingPage.git"
+  },
+  "keywords": [],
+  "author": "Antonio Ayola <antonio.ayola.cortes@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tono2007/CarsLandingPage/issues"
+  },
+  "homepage": "https://github.com/Tono2007/CarsLandingPage#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.7",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.3",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
