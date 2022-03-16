@@ -57,8 +57,8 @@ module.exports = (env, argv) => {
     plugins: [
       new HtmlWebpackPlugin({
         inject: true, // INYECTA EL BUNDLE AL TEMPLATE HTML EN ETIQUETA HEAD
-        template: "./src/pages/index.html", // LA RUTA AL TEMPLATE HTML
-        filename: "./pages/index.html", // NOMBRE FINAL DEL ARCHIVO
+        template: "./public/index.html", // LA RUTA AL TEMPLATE HTML
+        filename: "./index.html", // NOMBRE FINAL DEL ARCHIVO
       }),
       new HtmlWebpackPlugin({
         inject: true, // INYECTA EL BUNDLE AL TEMPLATE HTML EN ETIQUETA HEAD
@@ -81,6 +81,15 @@ module.exports = (env, argv) => {
     optimization: {
       minimize: true,
       minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
+    },
+    devServer: {
+      client: {
+        overlay: true,
+      },
+      compress: true,
+      historyApiFallback: true,
+      port: 3000,
+      open: true,
     },
   };
 };
