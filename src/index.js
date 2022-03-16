@@ -1,7 +1,7 @@
 import "./styles/style.css";
-import "./styles/style.scss";
+import "@styles/style.scss";
 
 function name(dfd) {
   console.log(dfd);
 }
-name("323");
+name("3234");
