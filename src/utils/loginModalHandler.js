@@ -3,6 +3,9 @@ document.querySelector(".header-container__login-btn").onclick = () => {
 };
 
 document.querySelector(".modal__close-btn").onclick = () => {
-  console.log("cerrar");
   document.querySelector(".modal").classList.remove("modal--active");
 };
+/* document.querySelector(".modal").onclick = (e) => {
+  e.stopPropagation();
+  document.querySelector(".modal").classList.remove("modal--active");
+}; */
