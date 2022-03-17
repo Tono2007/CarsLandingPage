@@ -1,7 +1,7 @@
-import "./styles/style.css";
 import "@styles/style.scss";
+import "./utils/navbarHandler";
 
-function name(dfd) {
-  console.log(dfd);
+function clg(text) {
+  console.log(text);
 }
-name("3234");
+clg("Holaa :P");

@@ -1,35 +1,208 @@
-@font-face {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* @font-face {
   font-family: "Poppins";
-  src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+  src: url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap)
+    format("woff2");
 }
+ */
+$primaryColor: #66b58f;
+$primaryDark: #428866;
+$primaryLight: #9aceb5;
+$primaryContrast: #fafafa;
+$textPrimary: #3c3e41;
+$textSecondary: #666;
+$backgroundPrimary: #fff;
+$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+$border: 1px solid rgba(0, 0, 0, 0.1);
 
-$primary-color: #2ba6cb;
-
+html {
+  font-size: 100%;
+}
 * {
-  background: $primary-color;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  outline: none;
+  border: none;
+  text-decoration: none;
 }
 
 body {
-}
-
-.container,
-.font {
-  font-size: 4rem;
-  background: blue;
-}
-
-.container {
-  font-size: 4rem;
-  background: lightcoral;
-
-  font-family: sans-serif;
-}
-.font {
-  font-size: 8rem;
-
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+/*----------------------------------------------------*/
+%section-container {
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
+}
+/*----------------------------------------------------*/
+.heading {
+  padding-bottom: 2rem;
+  text-align: center;
+  font-size: 4.5rem;
+  color: $textPrimary;
+}
+.heading__text {
+  padding-bottom: 2rem;
+  text-align: center;
+  font-size: 4.5rem;
+  color: $textPrimary;
+}
+.heading__text::before {
+  content: "";
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: $primaryLight;
+  z-index: -1;
+  clip-path: polygon(0 90%, 100% 80%, 100% 100%, 0% 100%);
+}
+/*----------------------------------------------------*/
+.btn {
+  transition: 0.2s linear;
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background: $primaryColor;
+  color: $primaryContrast;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.btn:hover {
+  background: $primaryDark;
+}
+/*----------------------------------------------------*/
+
+.demo {
+  background-color: lightblue;
+  height: 200vh;
+}
+.header {
+  transition: 0.3s linear;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: $backgroundPrimary;
+  padding: 30px 5%;
+
+  &--active {
+    padding: 17.6px 4%;
+    box-shadow: $box-shadow;
+  }
+}
+.header-container {
+  @extend %section-container;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+
+  &__logo {
+    font-size: 1.56rem;
+    color: $textPrimary;
+    font-weight: 600;
+    &__text {
+      color: $primaryColor;
+    }
+  }
+  &__navbar {
+    &__link {
+      text-transform: capitalize;
+      transition: 0.2s linear;
+      margin: 0 0.65rem;
+      font-size: 1.1rem;
+      color: $textPrimary;
+    }
+    &__link:hover {
+      color: $primaryColor;
+    }
+  }
+  %icon {
+    transition: 0.2s linear;
+    display: none;
+    font-size: 22px;
+    color: $textSecondary;
+    cursor: pointer;
+  }
+  &__icon {
+    &--menu,
+    &--login {
+      @extend %icon;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 85%;
+  }
+  .header {
+    padding: 20px 4%;
+
+    &--active {
+      padding: 16px 2%;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .header-container {
+    %icon {
+      display: block;
+    }
+    &__icon {
+      &--menu-active {
+        transform: rotate(180deg);
+      }
+    }
+    &__login-btn {
+      display: none;
+    }
+    &__navbar {
+      transition: 0.2s linear;
+      position: absolute;
+      top: 99%;
+      left: 0;
+      right: 0;
+      background: $backgroundPrimary;
+      box-shadow: $box-shadow;
+      border-top: transparent;
+      height: 0px;
+      overflow: hidden;
+      //  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      &--active {
+        border-top: $border;
+        height: 350px;
+        //clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      }
+      &__link {
+        display: block;
+        margin: 2rem;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  %section-container {
+    width: 95%;
+  }
+  html {
+    font-size: 85%;
+  }
+
+  .heading {
+    font-size: 3rem;
+  }
 }
