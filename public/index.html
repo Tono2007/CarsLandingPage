@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <i class="fas fa-bars header-container__menu-icon"></i>
+            <a href="#" class="header-container__logo">
+                <span class="header-container__logo__text">Max</span>wheels
+            </a>
+            <nav class="header-container__navbar">
+                <a class="header-container__navbar__link" href="#home">home</a>
+                <a class="header-container__navbar__link" href="#vehicles">vehicles</a>
+                <a class="header-container__navbar__link" href="#services">services</a>
+                <a class="header-container__navbar__link" href="#featured">featured</a>
+                <a class="header-container__navbar__link" href="#reviews">reviews</a>
+                <a class="header-container__navbar__link" href="#contact">contact</a>
+            </nav>
+            <div class="header-container__login-btn">
+                <button class="header-container__login-btn__button">Login</button>
+                <i class="far fa-user header-container__login-btn__icon"></i>
+            </div>
+            <!-- 
+            <button class="header-container__login-btn">Loging</button>
+            <i class="far fa-user header-container__icon--login"></i> -->
+        </div>
+    </header>
+    <div class="modal">
+        <span id="modal__close-btn" class="fas fa-times modal__close-btn"></span>
+        <div class="modal__content">
+            <form action="" class="login-form">
+                <h3>user login</h3>
+                <input type="email" placeholder="email" class="login-form__input" autocomplete="new-password" />
+                <input type="password" placeholder="password" class="login-form__input" autocomplete="new-password" />
+                <p>Forget Your Password <a href="#">Click Here</a></p>
+                <input type="submit" value="Login" class="login-form__submit-btn" />
+                <p>Or Login With</p>
+                <div class="login-form__buttons">
+                    <a href="#" class="login-form__buttons__btn"> Google </a>
+                    <a href="#" class="login-form__buttons__btn"> Facebook </a>
+                </div>
+                <p>Don't Have An Account <a href="#">Create One</a></p>
+            </form>
+        </div>
+    </div>
+    <section class="home" id="home">
+        <h3 data-speed="-2" class="home__parallax">Find Your Car</h3>
+        <img data-speed="5" class="home__parallax" src="assets/images/home-img.png" alt="" />
+        <a data-speed="7" href="#" class="home__parallax home__parallax--explore-btn">Explore Cars</a>
+    </section>
+    <section class="icons">
+        <div class="icons__container">
+            <div class="icons__container__icon">
+                <i class="fas fa-home"></i>
+                <div class="icons__container__icon__content">
+                    <h3>150+</h3>
+                    <p>Branches</p>
+                </div>
+            </div>
+
+            <div class="icons__container__icon">
+                <i class="fas fa-car"></i>
+                <div class="icons__container__icon__content">
+                    <h3>4770+</h3>
+                    <p>Cars Sold</p>
+                </div>
+            </div>
+
+            <div class="icons__container__icon">
+                <i class="fas fa-users"></i>
+                <div class="icons__container__icon__content">
+                    <h3>320+</h3>
+                    <p>Happy Clients</p>
+                </div>
+            </div>
+
+            <div class="icons__container__icon">
+                <i class="fas fa-car"></i>
+                <div class="icons__container__icon__content">
+                    <h3>1500+</h3>
+                    <p>News Cars</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="vehicles" id="vehicles">
+
+        <h1 class="vehicles__heading"> Popular <span>Vehicles</span> </h1>
+
+        <div class="swiper vehicles__slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <img src="assets/images/vehicle-1.png" alt="">
+                    <div class="swiper-slide__content">
+                        <h3>new model</h3>
+                        <div class="swiper-slide__content__price"> <span>price : </span> $62,000/- </div>
+                        <p>
+                            new
+                            <span class="fas fa-circle"></span> 2021
+                            <span class="fas fa-circle"></span> automatic
+                            <span class="fas fa-circle"></span> petrol
+                            <span class="fas fa-circle"></span> 183mph
+                        </p>
+                        <a href="#" class="swiper-slide__content__btn">check out</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="assets/images/vehicle-2.png" alt="">
+                    <div class="swiper-slide__content">
+                        <h3>new model</h3>
+                        <div class="swiper-slide__content__price"> <span>price : </span> $62,000/- </div>
+                        <p>
+                            new
+                            <span class="fas fa-circle"></span> 2021
+                            <span class="fas fa-circle"></span> automatic
+                            <span class="fas fa-circle"></span> petrol
+                            <span class="fas fa-circle"></span> 183mph
+                        </p>
+                        <a href="#" class="swiper-slide__content__btn">check out</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="assets/images/vehicle-3.png" alt="">
+                    <div class="swiper-slide__content">
+                        <h3>new model</h3>
+                        <div class="swiper-slide__content__price"> <span>price : </span> $62,000/- </div>
+                        <p>
+                            new
+                            <span class="fas fa-circle"></span> 2021
+                            <span class="fas fa-circle"></span> automatic
+                            <span class="fas fa-circle"></span> petrol
+                            <span class="fas fa-circle"></span> 183mph
+                        </p>
+                        <a href="#" class="swiper-slide__content__btn">check out</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="assets/images/vehicle-4.png" alt="">
+                    <div class="swiper-slide__content">
+                        <h3>new model</h3>
+                        <div class="swiper-slide__content__price"> <span>price : </span> $62,000/- </div>
+                        <p>
+                            new
+                            <span class="fas fa-circle"></span> 2021
+                            <span class="fas fa-circle"></span> automatic
+                            <span class="fas fa-circle"></span> petrol
+                            <span class="fas fa-circle"></span> 183mph
+                        </p>
+                        <a href="#" class="swiper-slide__content__btn">check out</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="assets/images/vehicle-5.png" alt="">
+                    <div class="swiper-slide__content">
+                        <h3>new model</h3>
+                        <div class="swiper-slide__content__price"> <span>price : </span> $62,000/- </div>
+                        <p>
+                            new
+                            <span class="fas fa-circle"></span> 2021
+                            <span class="fas fa-circle"></span> automatic
+                            <span class="fas fa-circle"></span> petrol
+                            <span class="fas fa-circle"></span> 183mph
+                        </p>
+                        <a href="#" class="swiper-slide__content__btn">check out</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="assets/images/vehicle-6.png" alt="">
+                    <div class="swiper-slide__content">
+                        <h3>new model</h3>
+                        <div class="swiper-slide__content__price"> <span>price : </span> $62,000/- </div>
+                        <p>
+                            new
+                            <span class="fas fa-circle"></span> 2021
+                            <span class="fas fa-circle"></span> automatic
+                            <span class="fas fa-circle"></span> petrol
+                            <span class="fas fa-circle"></span> 183mph
+                        </p>
+                        <a href="#" class="swiper-slide__content__btn">check out</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+    <div class="demo">dss</div>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+</body>
+
+</html>

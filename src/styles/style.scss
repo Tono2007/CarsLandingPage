@@ -41,36 +41,36 @@ body {
   margin: auto;
 }
 /*----------------------------------------------------*/
-.heading {
-  padding-bottom: 2rem;
+%heading {
+  padding-bottom: 1.3rem;
   text-align: center;
-  font-size: 4.5rem;
+  font-size: 2.85rem;
   color: $textPrimary;
+  font-weight: 600;
+  & span {
+    position: relative;
+    z-index: 0;
+  }
+  & span::before {
+    content: "";
+    position: absolute;
+    bottom: 11px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: $primaryColor;
+    z-index: -1;
+    clip-path: polygon(0 90%, 100% 80%, 100% 100%, 0% 100%);
+  }
 }
-.heading__text {
-  padding-bottom: 2rem;
-  text-align: center;
-  font-size: 4.5rem;
-  color: $textPrimary;
-}
-.heading__text::before {
-  content: "";
-  position: absolute;
-  bottom: 1rem;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: $primaryLight;
-  z-index: -1;
-  clip-path: polygon(0 90%, 100% 80%, 100% 100%, 0% 100%);
-}
+
 /*----------------------------------------------------*/
 %btn {
   transition: 0.2s linear;
   display: inline-block;
   padding: 0.8rem 1.8rem;
-  background: $primaryColor;
-  color: $primaryContrast;
+  background: $primaryLight;
+  color: $textPrimary;
   cursor: pointer;
   font-size: 1rem;
   border-radius: 4px;
@@ -79,7 +79,8 @@ body {
 }
 
 %btn:hover {
-  background: $primaryDark;
+  background: $primaryColor;
+  color: $primaryContrast;
 }
 /*----------------------------------------------------*/
 
@@ -319,6 +320,75 @@ body {
 }
 
 /*----------------------------------------------------*/
+.vehicles {
+  @extend %section-container;
+  padding: 1.5rem;
+
+  &__heading {
+    @extend %heading;
+  }
+  &__slider {
+    padding-bottom: 3.2rem;
+    .swiper-slide {
+      text-align: center;
+      text-transform: capitalize;
+      & img {
+        transition: 0.2s linear;
+        width: 100%;
+        transform: scale(0.8);
+        opacity: 0.5;
+      }
+      &__content {
+        transition: 0.2s linear;
+        padding-top: 0.65rem;
+        transform: scale(0);
+        & h3 {
+          font-size: 1.5rem;
+          color: $textPrimary;
+          font-weight: 600;
+        }
+        &__price {
+          font-size: 1.4rem;
+          color: $primaryColor;
+          padding: 1rem 0;
+          font-weight: 600;
+          span {
+            color: $textSecondary;
+            font-size: 0.95rem;
+            font-weight: normal;
+          }
+        }
+        & p {
+          font-size: 1rem;
+          color: $textSecondary;
+          padding: 0.7rem 0;
+          padding-top: 0.9rem;
+          border-top: $border;
+          & span {
+            font-size: 0.6rem;
+            color: $primaryColor;
+            padding: 0 0.5rem;
+          }
+        }
+        &__btn {
+          @extend %btn;
+        }
+      }
+      &-active {
+        .swiper-slide__content {
+          transform: scale(1);
+        }
+        img {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    }
+    .swiper-pagination-bullet-active {
+      background: $primaryColor;
+    }
+  }
+}
 
 /*----------------------------------------------------*/
 /*----------------------------------------------------*/
