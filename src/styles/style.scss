@@ -320,6 +320,7 @@ body {
 }
 
 /*----------------------------------------------------*/
+
 .vehicles {
   @extend %section-container;
   padding: 1.5rem;
@@ -328,10 +329,22 @@ body {
     @extend %heading;
   }
   &__slider {
-    padding-bottom: 3.2rem;
+    &__navigation {
+      &--prev::after,
+      &--next::after {
+        font-size: 32px !important;
+        color: $primaryColor;
+        color: $textSecondary;
+        margin-bottom: 60px;
+      }
+    }
+    .swiper-pagination-bullet-active {
+      background: $primaryDark;
+    }
     .swiper-slide {
       text-align: center;
       text-transform: capitalize;
+      padding-bottom: 3.2rem;
       & img {
         transition: 0.2s linear;
         width: 100%;
@@ -366,7 +379,7 @@ body {
           border-top: $border;
           & span {
             font-size: 0.6rem;
-            color: $primaryColor;
+            color: $primaryDark;
             padding: 0 0.5rem;
           }
         }
@@ -383,9 +396,6 @@ body {
           opacity: 1;
         }
       }
-    }
-    .swiper-pagination-bullet-active {
-      background: $primaryColor;
     }
   }
 }
