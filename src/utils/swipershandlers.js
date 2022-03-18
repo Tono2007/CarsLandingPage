@@ -2,7 +2,71 @@
 // import Swiper JS
 import Swiper, { Navigation, Pagination } from "swiper";
 
-var swiper = new Swiper(".vehicles__slider", {
+const swiperVehicles = new Swiper(".vehicles__slider", {
+  grabCursor: true,
+  centeredSlides: true,
+  spaceBetween: 20,
+  loop: true,
+ 
+  modules: [Navigation, Pagination],
+  pagination: {
+    el: ".vehicles__slider__pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".vehicles__slider__navigation--next",
+    prevEl: ".vehicles__slider__navigation--prev",
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+   autoplay: {
+    delay: 9500,
+    disableOnInteraction: false,
+  },
+});
+
+const swiperFeatured = new Swiper(".featured__slider", {
+  grabCursor: true,
+  centeredSlides: true,
+  spaceBetween: 20,
+  loop: true,
+  autoplay: true,
+  autoplay: {
+    delay: 500,
+    disableOnInteraction: false,
+  },
+  modules: [Navigation, Pagination],
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".featured__slider__navigation--next",
+    prevEl: ".featured__slider__navigation--prev",
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+const swiperReview = new Swiper(".review-slider", {
   grabCursor: true,
   centeredSlides: true,
   spaceBetween: 20,
@@ -13,12 +77,8 @@ var swiper = new Swiper(".vehicles__slider", {
   },
   modules: [Navigation, Pagination],
   pagination: {
-    el: ".vehicles__slider__pagination",
+    el: ".swiper-pagination",
     clickable: true,
-  },
-  navigation: {
-    nextEl: ".vehicles__slider__navigation--next",
-    prevEl: ".vehicles__slider__navigation--prev",
   },
   breakpoints: {
     0: {
