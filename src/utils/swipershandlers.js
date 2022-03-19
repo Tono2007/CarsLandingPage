@@ -1,13 +1,14 @@
 //import "swiper/css";
 // import Swiper JS
-import Swiper, { Navigation, Pagination } from "swiper";
+import Swiper, { Navigation, Pagination, Autoplay } from "swiper";
+Swiper.use([Autoplay]);
 
 const swiperVehicles = new Swiper(".vehicles__slider", {
   grabCursor: true,
   centeredSlides: true,
   spaceBetween: 20,
   loop: true,
- 
+
   modules: [Navigation, Pagination],
   pagination: {
     el: ".vehicles__slider__pagination",
@@ -28,7 +29,7 @@ const swiperVehicles = new Swiper(".vehicles__slider", {
       slidesPerView: 3,
     },
   },
-   autoplay: {
+  autoplay: {
     delay: 9500,
     disableOnInteraction: false,
   },
@@ -41,7 +42,7 @@ const swiperFeatured = new Swiper(".featured__slider", {
   loop: true,
   autoplay: true,
   autoplay: {
-    delay: 500,
+    delay: 9500,
     disableOnInteraction: false,
   },
   modules: [Navigation, Pagination],
