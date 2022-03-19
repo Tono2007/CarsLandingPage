@@ -67,7 +67,7 @@ const swiperFeatured = new Swiper(".featured__slider", {
   },
 });
 
-const swiperReview = new Swiper(".review-slider", {
+const swiperReview = new Swiper(".review__slider", {
   grabCursor: true,
   centeredSlides: true,
   spaceBetween: 20,
@@ -80,6 +80,10 @@ const swiperReview = new Swiper(".review-slider", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+  },
+  navigation: {
+    nextEl: ".review__slider__navigation--next",
+    prevEl: ".review__slider__navigation--prev",
   },
   breakpoints: {
     0: {

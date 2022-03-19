@@ -524,12 +524,119 @@ body {
   }
 }
 
+/*----------------------------------------------------*/
+
+.newsletter {
+  padding: 3.8rem 1.25rem;
+  background: url(../assets/images/letter-bg.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  & h3 {
+    font-size: 1.9rem;
+    color: $textPrimary;
+    font-weight: 600;
+  }
+  & p {
+    font-size: 0.95rem;
+    color: $textSecondary;
+    padding: 0.65rem 0;
+  }
+  &__form {
+    max-width: 37.5rem;
+    height: 3.1rem;
+    background: $backgroundPrimary;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    margin: 0.65rem auto;
+    box-shadow: $box-shadow;
+    & input[type="email"] {
+      height: 100%;
+      width: 100%;
+      padding: 0 1.3rem;
+      font-size: 1.1rem;
+      color: $textPrimary;
+      text-transform: none;
+    }
+    & input[type="submit"] {
+      transition: 0.2s linear;
+      height: 100%;
+      width: 10.55rem;
+      font-size: 1.15rem;
+      color: $textPrimary;
+      background: $primaryLight;
+      cursor: pointer;
+    }
+    & input[type="submit"]:hover {
+      background: $primaryColor;
+      color: #000;
+    }
+  }
+}
+
 .btnf {
   @extend%btn;
 }
+/*----------------------------------------------------*/
+.reviews {
+  @extend %section-container;
+  padding: 0.9rem 3%;
+  &__heading {
+    @extend %heading;
+  }
+  .review__slider {
+    .swiper-wrapper {
+      padding-bottom: 1.5rem;
+    }
+    &__navigation {
+      &--prev::after,
+      &--next::after {
+        font-size: 25px !important;
+        color: $primaryColor;
+        color: $textSecondary;
+      }
+    }
+    .swiper-slide {
+      transition: 0.2s linear;
+      text-align: center;
+      padding: 1.25rem;
+      margin: 1.25rem 0;
+      opacity: 0.4;
+      transform: scale(0.9);
+      & img {
+        height: 4.4rem;
+        width: 4.4rem;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      &__content {
+        & p {
+          color: $textSecondary;
+          font-size: 0.9rem;
+          padding: 0.65rem 0;
+        }
+        & h3 {
+          color: $textPrimary;
+          font-size: 1.4rem;
+          padding-bottom: 0.35rem;
+        }
+        &__stars i {
+          color: $primaryDark;
+          font-size: 1.1rem;
+        }
+      }
+    }
+    .swiper-slide-active {
+      opacity: 1;
+      transform: scale(1);
+      box-shadow: $box-shadow;
+      border: $border;
+      border-radius: 5px;
+    }
+  }
+}
 
-/*----------------------------------------------------*/
-/*----------------------------------------------------*/
 /*----------------------------------------------------*/
 /*----------------------------------------------------*/
 /*----------------------------------------------------*/
