@@ -700,6 +700,69 @@ textarea:focus {
 }
 
 /*----------------------------------------------------*/
+
+.footer {
+  background: $backgroundSecondary;
+  padding-bottom: 3rem;
+  &__container {
+    @extend%section-container;
+    margin-top: 4rem;
+    padding-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 0.95rem;
+    &__box {
+      padding-left: 6%;
+      & h3 {
+        font-size: 1.4rem;
+        padding: 0.65rem 0;
+        color: $textPrimary;
+      }
+      & a {
+        display: block;
+        font-size: 0.9rem;
+        padding: 0.65rem 0;
+        color: $textSecondary;
+        & i {
+          transition: 0.2s linear;
+          padding-right: 0.4rem;
+          color: $textPrimary;
+        }
+      }
+      & a:hover i {
+        padding-right: 1.3rem;
+      }
+    }
+  }
+  &__credit {
+    text-align: center;
+    padding: 0.9rem;
+    padding-top: 1.5rem;
+    margin-top: 1rem;
+    border-top: $border;
+    font-size: 1rem;
+    color: $textPrimary;
+    & a {
+      color: $primaryDark;
+    }
+    & a:hover {
+      //color: #000;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+}
+
+.footer .credit {
+  text-align: center;
+  padding: 0.9rem;
+  padding-top: 1.5rem;
+  margin-top: 1rem;
+  border-top: $border;
+  font-size: 1rem;
+  color: $textPrimary;
+}
+
 /*----------------------------------------------------*/
 /*----------------------------------------------------*/
 .swiper-pagination-bullet-active {
