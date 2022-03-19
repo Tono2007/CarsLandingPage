@@ -1,2 +1,0 @@
-# CarsLandingPage
-Simple CarsLandingPage
