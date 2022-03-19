@@ -1,6 +1,6 @@
 # Cars Landing Page
 
-Este proyecto es una landing page con tematica de carros algo simple, me sirvio principalmente para practicar y entender mejor webpack, antes de pasar a vite D:  
+Este proyecto es una landing page con tematica de carros algo simple, me sirvio principalmente para practicar y entender mejor webpack, antes de pasar a Vite D:  
 Tambien para ver como funciona sass junto con la metodologia BEM, implementar un efecto parallax de otra manera y un slider con SwiperJs. Esta vez lo subi a Github Pages, usando github actions, creando un pequeño workflow que crea el build y lo mueve a la rama de gh-pages para el deploy.
 
 ## **CAPTURAS**
@@ -15,11 +15,11 @@ Tambien para ver como funciona sass junto con la metodologia BEM, implementar un
  
 ## **DEMO**
 
-Puede ver el demo de este haciendo click [aquí](tono2007.github.io/carslandingpage/).
+Puede ver el demo de este haciendo click [aquí](https://tono2007.github.io/CarsLandingPage/).
 
 ## **TECNOLOGIAS**
 
-Para el portafolio utilice las siguientes tecnologias:
+Para el proyecto utilice las siguientes tecnologias:
 
 - Webpack
 - SASS(SCSS)
