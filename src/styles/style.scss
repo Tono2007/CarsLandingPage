@@ -34,6 +34,15 @@ body {
   font-family: "Poppins", sans-serif;
   scroll-padding-top: 7rem;
 }
+
+input,
+textarea {
+  border: $border;
+}
+input:focus,
+textarea:focus {
+  border: 2px solid $primaryColor;
+}
 /*----------------------------------------------------*/
 %section-container {
   width: 90%;
@@ -575,9 +584,6 @@ body {
   }
 }
 
-.btnf {
-  @extend%btn;
-}
 /*----------------------------------------------------*/
 .reviews {
   @extend %section-container;
@@ -638,6 +644,61 @@ body {
 }
 
 /*----------------------------------------------------*/
+
+.contact {
+  @extend %section-container;
+  padding: 0.9rem 4%;
+  &__heading {
+    @extend %heading;
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    &__map {
+      flex: 1 1 22rem;
+      width: 100%;
+      padding: 1.25rem;
+      box-shadow: $box-shadow;
+      border: $border;
+      border-radius: 5px;
+    }
+    &__form {
+      padding: 1.25rem;
+      flex: 1 1 22rem;
+      box-shadow: $box-shadow;
+      border: $border;
+      text-align: center;
+      border-radius: 5px;
+      & h3 {
+        font-size: 1.9rem;
+        font-weight: 600;
+        color: $textPrimary;
+        padding-bottom: 0.65rem;
+      }
+      %input {
+        width: 100%;
+        border-radius: 5px;
+        padding: 0.7rem 0.8rem;
+        font-size: 1.1rem;
+        text-transform: none;
+        margin: 0.45rem 0;
+      }
+      & input {
+        @extend%input;
+      }
+      & textarea {
+        @extend%input;
+        height: 9.5rem !important;
+        resize: none;
+      }
+      &__submit-btn {
+        @extend%btn;
+      }
+    }
+  }
+}
+
 /*----------------------------------------------------*/
 /*----------------------------------------------------*/
 /*----------------------------------------------------*/
